@@ -1,20 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/pages/login";
-import Signup from "./components/pages/signup";
-import Room from "./components/pages/room";
-import "./App.css";
+import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import About from './components/About/About'
+import Episodes from './components/Episodes/Episodes'
+import Platforms from './components/Platforms/Platforms'
+import LiveShows from './components/LiveShows/LiveShows'
+import Footer from './components/Footer/Footer'
+import './App.css'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/room" element={<Room />} />
-      </Routes>
-    </Router>
-  );
+    <div className="app">
+      <Navbar />
+      <Hero />
+      <About />
+      <Episodes />
+      <Platforms />
+      <LiveShows />
+      <Footer />
+    </div>
+  )
 }
 
-export default App;
+export default App
